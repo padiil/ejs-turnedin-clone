@@ -79,7 +79,34 @@
             <div
               id="product-area"
               class="row mt-3 mt-lg-5 justify-content-center"
-            ></div>
+            >
+              <% products.map((v,i) => { %>
+              <div class="col-12 col-lg-6 mb-2 mt-0 mt-lg-4">
+                <div class="row g-0 p-4 m-2 bg-primary rounded-4 text-white">
+                  <div class="col-md-4">
+                    <img
+                      src="<%= v.foto %>"
+                      class="img-fluid rounded-start w-50"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body h-100 text-start">
+                      <h5 class="card-title fw-bold mb-2"><%= v.judul %></h5>
+                      <p class="card-text" style="font-size: small">
+                        <%= v.isi %>
+                      </p>
+                      <a href="<%= v.link %>">
+                        <button type="button" class="btn btn-secondary">
+                          KLIK DISINI
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+            </div>
             <!-- card end -->
           </div>
         </div>
@@ -120,7 +147,31 @@
           <div
             id="testi-area"
             class="d-flex justify-content-around mt-5 overflow-auto"
-          ></div>
+          >
+            <% testimoni.map((v,i) => { %>
+            <div class="card shadow style">
+              <div class="card-body">
+                <div
+                  class="border border-top-0 border-start-0 border-end-0 mb-2 d-flex"
+                >
+                  <img
+                    src="<%= v.foto %>"
+                    alt="..."
+                    class="rounded-circle foto_profil"
+                  />
+                  <div class="mb-2 ms-2">
+                    <h5 class="card-title"><%= v.nama %></h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">
+                      <%= v.univ %>
+                    </h6>
+                  </div>
+                </div>
+
+                <p class="card-text"><%= v.isi %></p>
+              </div>
+            </div>
+            <% }) %>
+          </div>
         </div>
         <!-- testimoni end -->
 
