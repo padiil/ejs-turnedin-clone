@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head start-->
+  <%- include('../../partials/head.ejs') %>
+  <!-- head end -->
+
+  <body>
+    <!-- header start-->
+    <%- include('../../partials/header.ejs') %>
+    <!-- header end -->
+
+    <!-- main -->
+    <main class="my-3 mt-md-5 mb-md-5 pb-3 pb-md-5 mx-auto">
+      <!-- card -->
+      <div class="container my-5">
+        <!-- main card -->
+        <div class="row justify-content-center">
+          <div class="col col-lg-9">
+            <div class="card mx-auto border-0 shadow rounded-4 mb-5 lg">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">CEK TURNITIN NO-REPOSITORY</h5>
+                <!-- upload -->
+                <div class="row">
+                  <div class="w-100 px-0 px-md-4">
+                    <div
+                      class="card mx-1 my-4 bg-body-tertiary border-0 rounded-4 shadow"
+                    >
+                      <div class="card-body" id="dropArea">
+                        <input type="file" name="fileInput" id="fileInput" />
+                        <!-- button -->
+                        <div
+                          class="d-flex justify-content-center justify-content-md-end m-1"
+                        >
+                          <label
+                            for="fileInput"
+                            class="btn btn-primary mx-1 fz-14"
+                          >
+                            Unggah File
+                          </label>
+                          <button class="btn btn-danger mx-1 fz-14">
+                            Hapus Semua
+                          </button>
+                        </div>
+                        <!-- input -->
+                        <div class="text-center m-5 fw-bold">
+                          <!-- file desc -->
+                          <div
+                            class="row p-3 justify-content-start d-none"
+                            id="fileList"
+                          >
+                            <div class="card-title" id="titleProduct"></div>
+                          </div>
+                          <!-- file desc end -->
+
+                          <div id="titleProductText">
+                            <h5 class="fw-bold card-title mb-4">
+                              Cek Turnitin No-Repository
+                            </h5>
+                            <small class="card-text">
+                              TARIK FILE MU KESINI / KLIK AJA DISINI <br />
+                              .docx .pdf aja ya
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- text -->
+                <div class="row">
+                  <!-- 1 -->
+                  <div class="col-md mx-md-4 my-2">
+                    <div class="px-0 px-md-4">
+                      <h6 class="fw-bold fz-14">
+                        1. Filter pilihh aja sesuaii kebutuhan yaa
+                      </h6>
+                      <!-- checkbox -->
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="true"
+                          id="kutipan"
+                        />
+                        <label
+                          class="form-check-label fz-14"
+                          for="flexCheckDefault"
+                        >
+                          Kecualikan Kutipan
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="daftarPustaka"
+                        />
+                        <label
+                          class="form-check-label fz-14"
+                          for="flexCheckDefault"
+                        >
+                          Kecualikan Daftar Pustaka
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="sumberKurangDari"
+                        />
+                        <label
+                          class="form-check-label fz-14"
+                          for="flexCheckDefault"
+                        >
+                          Kecualikan sumber yang kurang dari ...
+                        </label>
+                        <!-- radio start -->
+                        <div id="radioKecuali" class="d-none">
+                          <!-- words -->
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="exampleRadios"
+                              id="radioWords"
+                              value="words"
+                              checked
+                            />
+                            <div class="d-flex align-items-center gap-2">
+                              <input
+                                type="number"
+                                name=""
+                                class="form-control rounded-5 w-50 fz-14"
+                                id="valueWords"
+                                min="1"
+                              />
+                              words
+                            </div>
+                          </div>
+                          <!-- percentage -->
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="exampleRadios"
+                              id="radioPersen"
+                              value="persen"
+                            />
+                            <div class="d-flex align-items-center gap-2">
+                              <input
+                                type="number"
+                                name=""
+                                class="form-control rounded-5 w-50 fz-14"
+                                id="valuePersen"
+                                min="1"
+                              />
+                              %
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- radio end -->
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="my-3 d-md-none" />
+                  <hr class="d-none d-md-block vr gx-0" />
+
+                  <!-- 2 -->
+                  <div class="col mx-md-4 fz-14 my-2">
+                    <div class="px-0 px-md-4">
+                      <h6 class="fw-bold fz-14">
+                        2. Isi Nomer Whatsapp kamu buat ngirim hasilnya
+                      </h6>
+                      <form>
+                        <div class="mb-3">
+                          <div class="d-flex">
+                            <img
+                              src="https://banner2.cleanpng.com/20240205/cwl/transparent-whatsapp-logo-green-circle-with-white-arrow-and-whatsapp-1710885977271.webp"
+                              alt=""
+                              id="gambar_wa"
+                              class="mx-2 my-auto"
+                              style="width: 25px; height: 25px"
+                            />
+
+                            <input
+                              id="whatsApp"
+                              type="number"
+                              class="form-control"
+                              placeholder="62xxxxxxxxx"
+                            />
+                          </div>
+
+                          <div class="form-check my-2">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                              checked
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                              Mau dapet info promo / update Turned In ga?
+                            </label>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <p class="form-label">
+                            <span class="fw-bold">Jumlah: </span> Rp 0
+                          </p>
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Referral Code (Opsional)</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="referral"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-center my-md-5">
+                    <div class="position-relative">
+                      <button
+                        type="button"
+                        class="btn btn-secondary fw-bold"
+                        disabled="true"
+                        id="submit_button"
+                        onclick="uploadFile()"
+                      >
+                        SUBMIT
+                      </button>
+                      <div
+                        class="count position-absolute text-center rounded-circle img-thumbnail border-4 border-white shadow-lg d-flex align-items-center justify-content-center text-white fw-bold"
+                      >
+                        0
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- info start-->
+      <div class="row my-5">
+        <div
+          class="col-12 d-flex flex-column align-items-center mt-5 mb-4 pt-5 pt-md-0 pb-4 bg-primary text-white px-0 w-100"
+        >
+          <div
+            class="col col-lg-10 col-xl-7 d-flex flex-column flex-md-row align-items-center justify-content-center p-0 mx-md-5 px-md-5"
+          >
+            <div>
+              <img
+                id="img_info"
+                src="https://turnedin.id/img/logo/1714118445603.png"
+                alt=""
+              />
+            </div>
+            <div class="mt-5 mx-4 mx-lg-5">
+              <h2 class="fw-bold text-center">
+                Cek Plagiasi Turnitin itu apa sih?
+              </h2>
+              <p class="text-center">
+                Turned In adalah layanan cek plagiasi otomatis yang terintegrasi
+                langsung dengan Turnitin sehingga bisa mendeteksi tingkat
+                plagiasi pada dokumen kamu
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- info end -->
+
+      <!-- Alasan start-->
+      <div class="row">
+        <div
+          class="col-12 d-flex flex-column align-items-center mt-2 mt-md-5 mb-md-4 pt-md-5 pb-4 px-0"
+        >
+          <div
+            class="d-flex flex-column align-items-center justify-content-center"
+          >
+            <div class="top text-center">
+              <h4 class="fw-semibold text-center">
+                Emang kenapa harus Turned In?
+              </h4>
+              <h6 class="fw-semibold text-secondary">
+                Harus dong, gausah ditanya
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Alasan end -->
+    </main>
+
+    <!-- footer start-->
+    <%- include('../../partials/footer.ejs') %>
+    <!-- footer end -->
+
+    <!-- script -->
+    <%- include('../../partials/script.ejs') %>
+    <!-- script -->
+  </body>
+</html>
