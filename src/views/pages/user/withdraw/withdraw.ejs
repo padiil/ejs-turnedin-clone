@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head start-->
+  <%- include('../../../partials/head.ejs') %>
+  <!-- head end -->
+
+  <body>
+    <!-- header start-->
+    <%- include('../../../partials/header.ejs') %>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main>
+      <div class="container mt-4 py-3">
+        <div class="row justify-content-center">
+          <!-- left start -->
+          <%- include('../../../partials/user.side.navigation.ejs') %>
+          <!-- left end -->
+          <!-- right start -->
+          <div class="col-12 col-md-8 px-3">
+            <div class="mx-auto mt-md-4 d-flex flex-column">
+              <div class="files px-3 mb-4">
+                <form action="" class="row my-4">
+                  <!-- Saldo -->
+                  <div
+                    class="d-flex flex-column flex-sm-row align-items-start justify-content-between mb-4"
+                  >
+                    <h5 class="fw-bold">Withdraw Saldo</h5>
+                    <div class="d-flex flex-column gap-1 mt-2 mt-sm-0">
+                      <span class="fz-14 text-end">Jumlah saldo :</span>
+                      <span class="fz-14 text-start fw-bold text-sm-end"
+                        >Rp 27.000</span
+                      >
+                    </div>
+                    <div class="d-flex flex-column gap-1 mt-2 mt-sm-0">
+                      <span class="fz-14 text-end"
+                        >Jumlah saldo yang bisa ditarik :</span
+                      >
+                      <span class="fz-14 text-start fw-bold text-sm-end"
+                        >Rp 27.000</span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- input section -->
+                  <!-- 1 -->
+                  <div class="col-12 col-sm-6 mb-3">
+                    <label for="jumlah-penarikan" class="fz-14"
+                      >jumlah Penarikan</label
+                    >
+                    <input
+                      type="number"
+                      name="jumlah-penarikan"
+                      id="jumlah-penarikan"
+                      placeholder="Contoh: 1250000"
+                      class="form-control form-control-lg fz-12 my-1"
+                    />
+                  </div>
+                  <!-- 2 -->
+                  <div class="col-12 col-sm-6 mb-3">
+                    <label for="metode-penarikan" class="fz-14"
+                      >Metode Penarikan</label
+                    >
+                    <input
+                      type="text"
+                      name="metode-penarikan"
+                      id="metode-penarikan"
+                      placeholder="Contoh: BNI"
+                      class="form-control form-control-lg fz-12 my-1"
+                    />
+                  </div>
+                  <!-- 3 -->
+                  <div class="col-12 col-sm-6 mb-3">
+                    <label for="nomor-rekening" class="fz-14"
+                      >Nomor Akun/Rekening</label
+                    >
+                    <input
+                      type="text"
+                      name="nomor-rekening"
+                      id="nomor-rekening"
+                      placeholder="Contoh: 123...."
+                      class="form-control form-control-lg fz-12 my-1"
+                    />
+                  </div>
+                  <div class="col-12 mt-3">
+                    <button
+                      type="submit"
+                      class="btn-border-none rounded-pill bg-primary-custom px-3 py-2 fz-14"
+                    >
+                      Ajukan Tarik Dana
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- right end -->
+        </div>
+      </div>
+    </main>
+    <!-- main end -->
+
+    <!-- script -->
+    <%- include('../../../partials/script.ejs') %>
+    <!-- script -->
+  </body>
+</html>

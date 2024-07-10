@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- head start-->
-  <%- include('../../partials/head.ejs') %>
+  <%- include('../../../partials/head.ejs') %>
   <!-- head end -->
 
   <body>
     <!-- header start-->
-    <%- include('../../partials/header.ejs') %>
+    <%- include('../../../partials/header.ejs') %>
     <!-- header end -->
 
     <!-- main start -->
@@ -14,76 +14,13 @@
       <div class="container mt-4 py-3">
         <div class="row justify-content-center">
           <!-- left start -->
-          <div class="col-3 col-xxl-4 d-none d-lg-block">
-            <div class="mt-md-4">
-              <!-- 1 profile start -->
-              <div class="card files border-0 mb-3">
-                <div class="card-body">
-                  <div class="d-flex flex-col">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=86280&format=png&color=000000"
-                      alt=""
-                      style="width: 8%"
-                    />
-                    <h5 class="card-title my fw-bold my-auto mx-2">Profil</h5>
-                  </div>
-                  <p class="card-text">Detail tentang profil</p>
-                </div>
-              </div>
-              <!-- 1 profile end -->
-              <!-- 2 profile start -->
-              <div class="card files border-0 mb-3">
-                <div class="card-body">
-                  <div class="d-flex flex-col">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=86280&format=png&color=000000"
-                      alt=""
-                      style="width: 8%"
-                    />
-                    <h5 class="card-title my fw-bold my-auto mx-2">Affiliate</h5>
-                  </div>
-                  <p class="card-text">Detail tentang Informasi affiliate</p>
-                </div>
-              </div>
-              <!-- 2 profile end -->
-              <!-- 3 profile start -->
-              <div class="card files border-0 mb-3">
-                <div class="card-body">
-                  <div class="d-flex flex-col">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=86280&format=png&color=000000"
-                      alt=""
-                      style="width: 8%"
-                    />
-                    <h5 class="card-title my fw-bold my-auto mx-2">Withdraw</h5>
-                  </div>
-                  <p class="card-text">Detail tentang Informasi withdraw</p>
-                </div>
-              </div>
-              <!-- 3 profile end -->
-              <!-- 4 profile start -->
-              <div class="card files border-0 mb-3">
-                <div class="card-body">
-                  <div class="d-flex flex-col">
-                    <img
-                      src="https://img.icons8.com/?size=100&id=86280&format=png&color=000000"
-                      alt=""
-                      style="width: 8%"
-                    />
-                    <h5 class="card-title my fw-bold my-auto mx-2">My Project</h5>
-                  </div>
-                  <p class="card-text">Detail tentang informasi proyek saya</p>
-                </div>
-              </div>
-              <!-- 4 profile end -->
-            </div>
-          </div>
+          <%- include('../../../partials/user.side.navigation.ejs') %>
           <!-- left end -->
           <!-- right start -->
-          <div class="col-12 col-lg-8 px-3">
+          <div class="col-12 col-lg-8 px-md-3">
             <form action="" class="justify-content-center mx-auto mt-lg-4">
               <!-- top start -->
-              <div class="px-3 mb-4 files py-4">
+              <div class="px-md-3 mb-4 files py-4">
                 <div
                   class="row flex-column flex-sm-row align-items-center justify-content-between gap-2 gap-lg-0"
                 >
@@ -97,17 +34,23 @@
                     </div>
                     <div class="d-flex flex-column mx-2">
                       <h5 class="fw-semibold">Fadhil Gani</h5>
-                      <button type="button" class="btn btn-secondary fz-14">
+                      <button
+                        type="button"
+                        class="btn btn-secondary-custom fz-12 px-1 py-1 w-75"
+                      >
                         Ganti Foto
                       </button>
                     </div>
                   </div>
                   <div class="col-12 col-sm-auto d-flex justify-content-end">
                     <div class="d-flex flex-column align-items-end fz-14">
-                      <button type="button" class="btn btn-secondary fz-14">
+                      <button
+                        type="button"
+                        class="btn btn-secondary-custom fz-12 px-2"
+                      >
                         Upload KYC
                       </button>
-                      <span class="fz-12 mt-2"
+                      <span class="fz-14 mt-2"
                         >*Upload KYC terlebih dahulu sebelum membuat
                         tawaran</span
                       >
@@ -116,12 +59,14 @@
                 </div>
               </div>
               <!-- top end -->
+
+              <!-- bottom start -->
               <div class="mb-4 files">
-                <div class="p-3">
+                <div class="px-3 py-4">
                   <h5>Ubah Informasi</h5>
                   <div class="row mt-3">
                     <!-- nama start -->
-                    <div class="col-12 col-sm-6 mb-3 fz-14">
+                    <div class="col-12 col-sm-6 mb-3 fz-14 ps-md-0">
                       <label for="name">Nama</label>
                       <input
                         id="name"
@@ -133,7 +78,7 @@
                     </div>
                     <!-- nama end -->
                     <!-- no hp start -->
-                    <div class="col-12 col-sm-6 mb-3 fz-14">
+                    <div class="col-12 col-sm-6 mb-3 fz-14 pe-md-0">
                       <label for="name">Nomor HP</label>
                       <input
                         id="name"
@@ -144,7 +89,7 @@
                     </div>
                     <!-- no hp end -->
                     <!-- email start -->
-                    <div class="col-12 col-sm-6 mb-3 fz-14">
+                    <div class="col-12 col-sm-6 mb-3 fz-14 ps-md-0">
                       <label for="name">Email</label>
                       <input
                         id="name"
@@ -155,7 +100,7 @@
                     </div>
                     <!-- email end -->
                     <!-- password start -->
-                    <div class="col-12 col-sm-6 mb-3 fz-14">
+                    <div class="col-12 col-sm-6 mb-3 fz-14 pe-md-0">
                       <label for="name">Password Baru</label>
                       <input
                         id="name"
@@ -166,7 +111,7 @@
                     </div>
                     <!-- password end -->
                     <!-- keahlian start -->
-                    <div class="col-12 fz-14">
+                    <div class="col-12 fz-14 px-0">
                       <label for="name">Keahlian</label>
                       <input
                         id="name"
@@ -177,17 +122,25 @@
                       <div class="col-12 mt-3 mb-3">
                         <label for="">Portofolio</label>
                       </div>
-                      <button type="button" class="btn btn-secondary fz-14">
+                      <button
+                        type="button"
+                        class="btn btn-secondary-custom fz-12"
+                      >
                         Tambah Portofolio
                       </button>
                     </div>
                     <div class="col-12 mt-3">
-                        <button class="w-100 btn-border-none rounded-pill btn-primary px-3 py-2 fz-14">Perbarui</button>
+                      <button
+                        class="w-100 btn-border-none rounded-pill btn-primary-custom px-3 py-2 fz-14"
+                      >
+                        Perbarui
+                      </button>
                     </div>
                     <!-- keahlian end -->
                   </div>
                 </div>
               </div>
+              <!-- bottom end -->
             </form>
           </div>
           <!-- right end -->
@@ -195,5 +148,9 @@
       </div>
     </main>
     <!-- main end -->
+
+    <!-- script -->
+    <%- include('../../../partials/script.ejs') %>
+    <!-- script -->
   </body>
 </html>

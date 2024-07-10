@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head start-->
+  <%- include('../../../partials/head.ejs') %>
+  <!-- head end -->
+
+  <body>
+    <!-- header start-->
+    <%- include('../../../partials/header.ejs') %>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main>
+      <div class="container mt-4 py-3">
+        <div class="row justify-content-center">
+          <!-- left start -->
+          <%- include('../../../partials/user.side.navigation.ejs') %>
+          <!-- left end -->
+          <!-- right start -->
+          <div class="col-12 col-lg-9 col-xxl-8 px-0 px-sm-3">
+            <!-- top -->
+            <div class="justify-content-center mx-auto mt-md-4">
+              <ul class="nav nav-pills mb-3">
+                <li
+                  class="border-bottom border-3 border-primary-custom"
+                  role="presentation"
+                >
+                  <a
+                    href=""
+                    class="nav-link bg-transparent fz-14 active"
+                    style="color: black"
+                    >Project Saya</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- bottom -->
+            <div class="files p-3 mb-4">
+              <div class="row">
+                <div class="col-12">
+                  <div class="py-3">
+                    <div class="mb-0">
+                      <h5>Project</h5>
+                      <div class="row align-items-center">
+                        <form
+                          action=""
+                          class="mb-3 col-6 col-md-6 col-lg-8 col-xl-8 d-flex position-relative"
+                        >
+                          <input
+                            type="search"
+                            name=""
+                            id=""
+                            class="form-control me-2 fz-12"
+                            placeholder="Cari proyek"
+                          />
+                        </form>
+                        <div class="mb-3 col-6 col-md-3 ps-md-0 col-lg-2">
+                          <select
+                            class="form-select fz-12"
+                            aria-label="Default select example"
+                          >
+                            <option selected disabled>Urutkan</option>
+                            <option value="1">Terbaru</option>
+                            <option value="2">Terlama</option>
+                          </select>
+                        </div>
+                        <div
+                          class="mb-3 col-12 col-md-3 col-lg-2 px-md-0 text-md-center"
+                        >
+                          <button
+                            class="btn-secondary-custom fz-14 rounded p-2"
+                          >
+                            Buat Proyek
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- top pagination -->
+                    <div class="d-flex justify-content-end mt-3 pagination">
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                          <li class="page-item">
+                            <a
+                              class="page-link disabled"
+                              href="#"
+                              aria-label="Previous"
+                            >
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                    <!-- img -->
+                    <div class="mx-auto mt-md-4">
+                      <div class="d-flex flex-column align-items-center gap-2">
+                        <img
+                          class="w-25 h-auto"
+                          src="https://turnedin.id/img/illustration/empty.svg"
+                          alt=""
+                        />
+                        <span class="fz-14">Tidak ada project</span>
+                      </div>
+                    </div>
+                    <!-- bottom pagination -->
+                    <div class="d-flex justify-content-end mt-3 pagination">
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                          <li class="page-item">
+                            <a
+                              class="page-link disabled"
+                              href="#"
+                              aria-label="Previous"
+                            >
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- right end -->
+        </div>
+      </div>
+    </main>
+    <!-- main end -->
+
+    <!-- script -->
+    <%- include('../../../partials/script.ejs') %>
+    <!-- script -->
+  </body>
+</html>

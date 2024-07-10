@@ -174,7 +174,7 @@
                                     </div>
                                     <button
                                       type="button"
-                                      class="btn-primary text-white rounded my-auto"
+                                      class="btn-primary-custom text-white rounded my-auto"
                                       style="font-size: small;"
                                     >
                                       Lihat Proyek

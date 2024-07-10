@@ -1,32 +1,14 @@
-import { home } from "../controllers/general.controller.js";
-import {
-  login,
-  profile,
-  cekTurnitin,
-  parafraseIn,
-  translateIn,
-  sarangFreelance,
-} from "../controllers/services.controller.js";
+import { route as generalRoute } from "./general.routes.js";
+import { route as servicesRoute } from "./services.routes.js";
+import { route as userRoute } from "./user.routes.js";
 
 export const route = (app) => {
-  // home page
-  app.get("/", home);
+  // call general route
+  generalRoute(app);
 
-  // cek turnitin page
-  app.get("/cek-turnitin", cekTurnitin);
+  // call services route
+  servicesRoute(app);
 
-  // prafrase page
-  app.get("/parafrase-in", parafraseIn);
-
-  // translate page
-  app.get("/translate-in", translateIn);
-
-  // sarang freelance page
-  app.get("/sarang-freelance", sarangFreelance);
-
-  // login page
-  app.get("/login", login);
-
-  // profile page
-  app.get("/profile", profile)
+  // call user route
+  userRoute(app);
 };

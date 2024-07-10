@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 
 // home page
-const home = async (req, res) => {
+export const home = async (req, res) => {
   // fetch data products
   const resultProduct = await fetch("http://192.168.18.12:4000/product", {
     method: "GET",
@@ -20,5 +20,3 @@ const home = async (req, res) => {
     testimoni,
   });
 };
-
-export { home };

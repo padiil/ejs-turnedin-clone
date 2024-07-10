@@ -1,13 +1,3 @@
-// login page
-const login = (req, res) => {
-  res.render("pages/login/login.ejs");
-};
-
-// profile page
-const profile = (req, res) => {
-  res.render("pages/profile/profile.ejs");
-};
-
 // cek turnitin page
 const cekTurnitin = (req, res) => {
   res.render("pages/cek-turnitin/cek-turnitin.ejs");
@@ -28,4 +18,4 @@ const sarangFreelance = (req, res) => {
   res.render("pages/sarang-freelance/sarang-freelance.ejs");
 };
 
-export { login, profile, cekTurnitin, parafraseIn, translateIn, sarangFreelance };
+export {cekTurnitin, parafraseIn, translateIn, sarangFreelance };
