@@ -8,14 +8,14 @@ import {
 
 export const route = (app) => {
   // cek turnitin page
-  app.get("/cek-turnitin", cekTurnitin);
+  app.get("/services/cek-turnitin/order", cekTurnitin);
 
   // prafrase page
-  app.get("/parafrase-in", parafraseIn);
+  app.get("/services/parafrase/order", parafraseIn);
 
   // translate page
-  app.get("/translate-in", translateIn);
+  app.get("/services/translate/order", translateIn);
 
   // sarang freelance page
-  app.get("/sarang-freelance", sarangFreelance);
+  app.get("/user/project", sarangFreelance);
 };

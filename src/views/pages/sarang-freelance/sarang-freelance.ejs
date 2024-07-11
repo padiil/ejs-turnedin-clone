@@ -1,147 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- head start-->
-  <%- include('../../partials/head.ejs') %>
+<!-- head start-->
+<%- include('../../partials/head.ejs') %>
   <!-- head end -->
 
   <body>
     <!-- header start-->
-    <%- include('../../partials/header.ejs') %>
-    <!-- header end -->
+    <%- include('../../partials/header.ejs') %> <%- include('../../partials/banner.ejs') %>
+        <!-- header end -->
 
-    <!-- main -->
-    <main>
-      <div class="container mt-4 py-3 px-0">
-        <div class="row justify-content-center">
-          <div class="col-12 px-0 px-sm-3">
-            <div class="justify-content-center mx-auto mt-md-4">
-              <!-- container start -->
-              <div class="px-3 mb-4 shadow rounded">
-                <div class="row">
-                  <div class="col-12 px-0">
-                    <!-- top section start -->
-                    <div class="py-3">
-                      <div class="mb-0">
-                        <h5 class="mb-3 fw-bold">List Project</h5>
+        <!-- main -->
+        <main>
+          <div class="container mt-4 py-3 px-0">
+            <div class="row justify-content-center">
+              <div class="col-12 px-0 px-sm-3">
+                <div class="justify-content-center mx-auto mt-md-4">
+                  <!-- container start -->
+                  <div class="px-3 mb-4 files">
+                    <div class="row">
+                      <div class="col-12 px-0">
+                        <!-- top section start -->
+                        <div class="py-3">
+                          <div class="mb-0">
+                            <h5 class="mb-3 fw-bold">List Project</h5>
 
-                        <!-- search section -->
-                        <div
-                          class="row align-items-center justify-content-center"
-                        >
-                          <form
-                            action=""
-                            class="mb-3 col-6 col-md-5 col-lg-7 col-xxl-8 d-flex position-relative"
-                            role="search"
-                          >
-                            <input
-                              type="search"
-                              class="form-control me-2"
-                              placeholder="cari cuan"
-                            />
-                          </form>
-                          <div class="mb-3 col-6 col-md-3 col-lg-2">
-                            <select
-                              class="form-select"
-                              aria-label="Default select example"
-                            >
-                              <option value="1" disabled selected>
-                                Urutkan
-                              </option>
-                              <option value="2">Terbaru</option>
-                              <option value="3">Terlama</option>
-                            </select>
+                            <!-- search section -->
+                            <div class="row align-items-center justify-content-center">
+                              <form action="" class="mb-3 col-6 col-md-5 col-lg-7 col-xxl-8 d-flex position-relative"
+                                role="search">
+                                <input type="search" class="form-control me-2" placeholder="cari cuan" />
+                              </form>
+                              <div class="mb-3 col-6 col-md-3 col-lg-2">
+                                <select class="form-select" aria-label="Default select example">
+                                  <option value="1" disabled selected>
+                                    Urutkan
+                                  </option>
+                                  <option value="2">Terbaru</option>
+                                  <option value="3">Terlama</option>
+                                </select>
+                              </div>
+                              <button type="button"
+                                class="btn btn-secondary-custom mb-3 col-12 col-md-auto col-lg-3 col-xxl-2 text-xxl-center">
+                                Project Saya
+                              </button>
+                            </div>
+                            <!-- search section end -->
                           </div>
-                          <button
-                            type="button"
-                            class="btn btn-secondary-custom mb-3 col-12 col-md-auto col-lg-3 col-xxl-2 text-xxl-center"
-                          >
-                            Project Saya
-                          </button>
                         </div>
-                        <!-- search section end -->
+                        <!-- top section end -->
+
+                        <!-- top nav section start -->
+                        <nav class="d-flex justify-content-end mt-3 pagination" aria-label="Page navigation example">
+                          <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#"><<</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link active-custom" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">4</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">5</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">>></a>
+                            </li>
+                          </ul>
+                        </nav>
+                        <!-- top nav section end -->
+
+                        <!-- list job section start -->
+                        <div id="listjob-area">
+                          <% project.map((v,i)=> { %>
+
+                            <!-- inner html -->
+                            <div class="mx-auto mt-md-4">
+                              <div class="px-3 mb-3 p-3 p-sm-4 files">
+                                <div class="row justify-content-between align-items-start">
+                                  <!-- profil -->
+                                  <div
+                                    class="col-12 col-sm-4 col-md-3 col-lg-2 left text-center mb-3 d-none d-md-block">
+                                    <img src="<%= v.fotoProfil %>" alt="" class="img-thumbnail rounded-circle w-50" />
+                                    <div class="d-block mt-2 text-primary-custom">
+                                      <%= v.nama %>
+                                    </div>
+                                  </div>
+
+                                  <!-- right -->
+                                  <div class="col-12 col-md-9 col-lg-10 right">
+                                    <div class="row">
+                                      <div
+                                        class="col-12 col-lg-7 ps-0 pe-0 mb-2 d-flex align-items-center justify-content-between">
+                                        <!-- left -->
+                                        <div class="me-2">
+                                          <h6 class="fw-semibold text-primary-custom">
+                                            <%= v.judul %>
+                                          </h6>
+                                          <p class="d-block fw-semibold" style="font-size: smaller">
+                                            Anggaran <%= v.harga %>
+                                          </p>
+                                        </div>
+                                        <p class="badge text-bg-success d-md-none">
+                                          Open
+                                        </p>
+                                      </div>
+
+                                      <!-- right -->
+                                      <div class="col-12 col-lg-5 mt-2 mt-lg-0 d-none d-md-block pe-0">
+                                        <div class="d-flex handle-flex justify-content-lg-end gap-2">
+                                          <!-- penawaran start -->
+                                          <!-- penawaran -->
+                                          <% if (v.penawaran.penawar==="" || v.penawaran.penawar==="0" ) { %>
+                                            <h6 class="fz-12 mb-0 px-md-3 mb-lg-2 me-2 me-lg-0">
+                                              Belum ada penawaran
+                                            </h6>
+                                            <% } else { %>
+                                              <div class="d-none d-md-flex">
+                                                <h6 class="fw-400 mb-0 px-3 mb-lg-2 me-2 me-lg-0 text-primary-custom">
+                                                  <%= v.penawaran.penawar %> Penawaran
+                                                </h6>
+                                                <div
+                                                  class="d-flex gap-1 flex-column flex-sm-row flex-lg-column align-items-sm-center align-items-md-end">
+                                                  <h6 class="mb-0 fw-semibold text-primary-custom">
+                                                    <%= v.penawaran.hargaPenawaran %>
+                                                  </h6>
+                                                  <div class="d-block fw-semibold" style="font-size: small">
+                                                    Penawaran rata-rata
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="d-md-none fz-12">
+                                                <p>
+                                                  <%= v.penawaran.penawar %> Penawaran dengan rata-rata penawaran
+                                                    <strong>
+                                                      <%= v.penawaran.hargaPenawaran %>
+                                                    </strong>
+                                                </p>
+                                              </div>
+                                              <% } %>
+                                                <!-- penawaran end -->
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- deskripsi -->
+                                    <div class="mt-3 mt-lg-0 mb-3 d-flex flex-column gap-1">
+                                      <p style="font-size: 13px">
+                                        <%= v.deskripsi %>
+                                      </p>
+                                    </div>
+
+                                    <!-- badge -->
+                                    <div class="d-flex flex-column">
+                                      <div class="mt-md-3 d-flex align-items-center justify-content-between gap-2">
+                                        <div class="d-flex flex-wrap gap-1">
+                                          <!-- badge start -->
+                                          <% for (let j = 0; j < v.badge.length; j++) { %>
+                                            <p class="badge mb-0 bg-body-secondary text-black fw-normal">
+                                              <%= v.badge[j] %>
+                                            </p>
+                                          <% } %>
+                                          <!-- badge end -->
+                                        </div>
+                                        <div class="d-md-none text-nowrap">
+                                          <p class="m-auto" style="font-size: 12px">
+                                            <%= v.tanggal %>
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class="mt-3 d-md-none">
+                                        <!-- penawaran phone -->
+                                        <% if (v.penawaran.penawar==="" || v.penawaran.penawar==="0" ) { %>
+                                          <h6 class="fz-12 mb-0 px-md-3 mb-lg-2 me-2 me-lg-0">
+                                            Belum ada penawaran
+                                          </h6>
+                                          <% } else { %>
+                                            <div class="d-none d-md-flex">
+                                              <h6 class="fw-400 mb-0 px-3 mb-lg-2 me-2 me-lg-0">
+                                                <%= v.penawaran.penawar %> Penawaran
+                                              </h6>
+                                              <div
+                                                class="d-flex gap-1 flex-column flex-sm-row flex-lg-column align-items-sm-center align-items-md-end">
+                                                <h6 class="mb-0 fw-semibold">
+                                                  <%= v.penawaran.hargaPenawaran %>
+                                                </h6>
+                                                <div class="d-block fw-semibold" style="font-size: small">
+                                                  Penawaran rata-rata
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="d-md-none fz-12">
+                                              <p class="mb-0">
+                                                <%= v.penawaran.penawar %> Penawaran dengan rata-rata penawaran
+                                                  <strong>
+                                                    <%= v.penawaran.hargaPenawaran %>
+                                                  </strong>
+                                              </p>
+                                            </div>
+                                            <% } %>
+                                      </div>
+                                    </div>
+
+                                    <hr class="d-md-none" />
+                                    <!-- status -->
+                                    <div
+                                      class="d-flex flex-column flex-md-row align-items-md-center justify-content-between pt-md-5">
+                                      <div class="d-none d-md-flex align-items-center gap-2 mb-3 mb-md-0">
+                                        <p>status :</p>
+                                        <p class="badge text-bg-success">
+                                          <%= v.status %>
+                                        </p>
+                                      </div>
+                                      <div class="d-flex align-items-center justify-content-between">
+                                        <div class="me-3 d-none d-md-block">
+                                          <%= v.tanggal %>
+                                        </div>
+                                        <div class="right d-flex justify-content-between">
+                                          <div class="d-flex d-md-none align-items-center gap-2" style="width: 60%">
+                                            <img src="<%= v.fotoProfil %>" alt="" style="width: 30%"
+                                              class="img-thumbnail rounded-circle" />
+                                            <p class="d-block my-auto">
+                                              <%= v.nama %>
+                                            </p>
+                                          </div>
+                                          <button type="button" class="btn-primary-custom text-white rounded my-auto"
+                                            style="font-size: small">
+                                            Lihat Proyek
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <% }) %>
+                        </div>
+                        <!-- list job section end -->
+
+                        <!-- bottom nav section start -->
+                        <nav class="d-flex justify-content-end mt-3 pagination" aria-label="Page navigation example">
+                          <ul class="pagination">
+                            <li class="page-item">
+                              <a class="page-link" href="#"><<</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link active-custom" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">4</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">5</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">>></a>
+                            </li>
+                          </ul>
+                        </nav>
+                        <!-- bottom nav section end -->
                       </div>
                     </div>
-                    <!-- top section end -->
-
-                    <!-- top nav section start -->
-                    <nav
-                      class="d-flex justify-content-end mt-3 pagination"
-                      aria-label="Page navigation example"
-                    >
-                      <ul class="pagination">
-                        <li class="page-item">
-                          <a class="page-link" href="#"><<</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link active-custom" href="#">1</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">3</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">4</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">5</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">>></a>
-                        </li>
-                      </ul>
-                    </nav>
-                    <!-- top nav section end -->
-
-                    <!-- list job section start -->
-                    <div id="listjob-area">
-
-                    </div>
-                    <!-- list job section end -->
-
-                    <!-- bottom nav section start -->
-                    <nav
-                      class="d-flex justify-content-end mt-3 pagination"
-                      aria-label="Page navigation example"
-                    >
-                      <ul class="pagination">
-                        <li class="page-item">
-                          <a class="page-link" href="#"><<</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link active-custom" href="#">1</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">3</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">4</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">5</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">>></a>
-                        </li>
-                      </ul>
-                    </nav>
-                    <!-- bottom nav section end -->
                   </div>
+                  <!-- container end -->
                 </div>
               </div>
-              <!-- container end -->
             </div>
           </div>
-        </div>
-      </div>
-    </main>
+        </main>
 
-    <!-- script -->
-    <%- include('../../partials/script.ejs') %>
-    <!-- script -->
+        <!-- script -->
+        <%- include('../../partials/script.ejs') %>
+          <!-- script -->
   </body>
+
 </html>
