@@ -186,4 +186,49 @@ a {
     width: 200px;
     margin-top: -130px;
   }
+
+  .foto_profil {
+    width: 40px;
+    height: 40px;
+  }
+
+  #testi-card {
+    width: 50%;
+    height: 30%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .foto_profil {
+    width: 40px;
+    height: 40px;
+  }
+
+  #testi-card {
+    width: 50%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #testi-card {
+    width: 35%;
+    height: 250px;
+  }
+  #isi-testimoni {
+    font-size: medium;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #testi-card {
+    width: 20%;
+  }
 }

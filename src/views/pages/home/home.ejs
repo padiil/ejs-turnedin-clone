@@ -4,266 +4,268 @@
   <%- include('../../partials/head.ejs') %>
   <!-- head end -->
   <body>
-    <div class="overflow-x-hidden">
-      <!-- header start-->
-      <%- include('../../partials/header.ejs') %>
-      <%- include('../../partials/banner.ejs') %>
-      <!-- header end -->
+    <!-- header start-->
+    <%- include('../../partials/header.ejs') %> <%-
+    include('../../partials/banner.ejs') %>
+    <!-- header end -->
 
-      <!-- main -->
-      <main
-        class="mt-3 mt-md-4 mb-md-5 pb-3 pb-md-5 mx-auto justify-content-center"
-      >
-        <div class="container mb-5 pb-5 px-md-5">
-          <div class="text-center mb-5 mx-0 px-0 mx-md-5 px-md-5">
-            <!-- carousel start-->
-            <div class="row">
+    <!-- main -->
+    <main
+      class="mt-3 mt-md-4 mb-md-5 pb-3 pb-md-5 mx-auto justify-content-center"
+    >
+      <div class="container md-mb-5 pb-5 px-md-5">
+        <div class="text-center mb-5 mx-0 px-0 mx-md-5 px-md-5">
+          <!-- carousel start-->
+          <div class="row">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide my-md-4 px-0"
+              data-bs-ride="carousel"
+            >
               <div
-                id="carouselExampleIndicators"
-                class="carousel slide my-md-4 px-0"
-                data-bs-ride="carousel"
+                class="carousel-indicators position-absolute carousel_indicator"
               >
-                <div
-                  class="carousel-indicators position-absolute carousel_indicator"
-                >
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="0"
-                    class="active rounded-circle"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                    class="rounded-circle"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="2"
-                    aria-label="Slide 3"
-                    class="rounded-circle"
-                  ></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="5000">
-                    <img
-                      src="https://turnedin.id/img/logo/1716737496934.png"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item" data-bs-interval="5000">
-                    <img
-                      src="https://turnedin.id/img/logo/1720364721132.svg"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="carousel-item" data-bs-interval="5000">
-                    <img
-                      src="https://turnedin.id/img/logo/1716737496935.png"
-                      class="d-block w-100"
-                      alt="..."
-                    />
-                  </div>
-                </div>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active rounded-circle"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                  class="rounded-circle"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                  class="rounded-circle"
+                ></button>
               </div>
-            </div>
-            <!-- carousel end -->
-
-            <!-- card start-->
-            <div
-              id="product-area"
-              class="row mt-3 mt-lg-5 justify-content-center"
-            >
-              <% products.map((v,i) => { %>
-              <div class="col-12 col-lg-6 mb-2 mt-0 mt-lg-4">
-                <div class="row g-0 p-4 m-2 bg-primary-custom rounded-4 text-white">
-                  <div class="col-md-4">
-                    <img
-                      src="<%= v.foto %>"
-                      class="img-fluid rounded-start w-50"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body h-100 text-start">
-                      <h5 class="card-title fw-bold mb-2"><%= v.judul %></h5>
-                      <p class="card-text" style="font-size: small">
-                        <%= v.isi %>
-                      </p>
-                      <a href="<%= v.link %>">
-                        <button type="button" class="btn btn-secondary-custom">
-                          KLIK DISINI
-                        </button>
-                      </a>
-                    </div>
-                  </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                  <img
+                    src="https://turnedin.id/img/logo/1716737496934.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
                 </div>
-              </div>
-              <% }) %>
-            </div>
-            <!-- card end -->
-          </div>
-        </div>
-
-        <!-- info start-->
-        <div class="row my-5">
-          <div
-            class="col-12 d-flex flex-column align-items-center mt-5 mb-4 pt-5 pt-md-0 pb-4 bg-primary-custom text-white px-0 w-100"
-          >
-            <div
-              class="col col-lg-10 col-xl-7 d-flex flex-column flex-md-row align-items-center justify-content-center p-0 mx-md-5 px-md-5"
-            >
-              <div>
-                <img
-                  id="img_info"
-                  src="https://turnedin.id/img/logo/1714118445603.png"
-                  alt=""
-                />
-              </div>
-              <div class="mt-5 mx-4 mx-lg-5">
-                <h2 class="fw-bold text-center">Apasih Turned In tuh</h2>
-                <p class="text-center">
-                  Turnedin adalah layanan cek plagiasi otomatis berbasis
-                  turnitin <strong>PERTAMA</strong> di Indonesia!!
-                </p>
+                <div class="carousel-item" data-bs-interval="5000">
+                  <img
+                    src="https://turnedin.id/img/logo/1720364721132.svg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                  <img
+                    src="https://turnedin.id/img/logo/1716737496935.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- info end -->
+          <!-- carousel end -->
 
-        <!-- testimoni start-->
-        <div class="mt-2 mt-md-5 mb-md-4 pt-md-5 pb-4">
-          <h4 class="fw-semibold text-center justify-content-around">
-            Kata Mereka
-          </h4>
-
+          <!-- card start-->
           <div
-            id="testi-area"
-            class="d-flex justify-content-around mt-5 overflow-auto"
+            id="product-area"
+            class="row mt-3 mt-lg-5 justify-content-center"
           >
-            <% testimoni.map((v,i) => { %>
-            <div class="card shadow style">
-              <div class="card-body">
-                <div
-                  class="border border-top-0 border-start-0 border-end-0 mb-2 d-flex"
-                >
+            <% products.map((v,i) => { %>
+            <div class="col-12 col-lg-6 mb-2 mt-0 mt-lg-4">
+              <div
+                class="row g-0 p-4 m-2 bg-primary-custom rounded-4 text-white"
+              >
+                <div class="col-md-4">
                   <img
                     src="<%= v.foto %>"
+                    class="img-fluid rounded-start w-50"
                     alt="..."
-                    class="rounded-circle foto_profil"
                   />
-                  <div class="mb-2 ms-2">
-                    <h5 class="card-title"><%= v.nama %></h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">
-                      <%= v.univ %>
-                    </h6>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body h-100 text-start">
+                    <h5 class="card-title fw-bold mb-2"><%= v.judul %></h5>
+                    <p class="card-text" style="font-size: small">
+                      <%= v.isi %>
+                    </p>
+                    <a href="<%= v.link %>">
+                      <button type="button" class="btn btn-secondary-custom">
+                        KLIK DISINI
+                      </button>
+                    </a>
                   </div>
                 </div>
-
-                <p class="card-text"><%= v.isi %></p>
               </div>
             </div>
             <% }) %>
           </div>
+          <!-- card end -->
         </div>
-        <!-- testimoni end -->
+      </div>
 
-        <!-- Alasan start-->
-        <div class="row">
+      <!-- info start-->
+      <div class="row my-5">
+        <div
+          class="col-12 d-flex flex-column align-items-center md-mt-5 mb-4 pt-5 pt-md-0 pb-4 bg-primary-custom text-white px-0 w-100"
+        >
           <div
-            class="col-12 d-flex flex-column align-items-center mt-2 mt-md-5 mb-md-4 pt-md-5 pb-4 px-0"
+            class="col col-lg-10 col-xl-7 d-flex flex-column flex-md-row align-items-center justify-content-center p-0 mx-md-5 px-md-5"
           >
-            <div
-              class="d-flex flex-column align-items-center justify-content-center"
-            >
-              <div class="top text-center">
-                <h4 class="fw-semibold text-center">
-                  Biar apa pake Turned In?
-                </h4>
-                <h6 class="fz-14 fw-semibold text-secondary-custom">
-                  Biar apa pake Turned In?
-                </h6>
-              </div>
+            <div>
+              <img
+                id="img_info"
+                src="https://turnedin.id/img/logo/1714118445603.png"
+                alt=""
+              />
+            </div>
+            <div class="mt-5 mx-4 mx-lg-5">
+              <h2 class="fw-bold text-center">Apasih Turned In tuh</h2>
+              <p class="text-center">
+                Turnedin adalah layanan cek plagiasi otomatis berbasis turnitin
+                <strong>PERTAMA</strong> di Indonesia!!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- info end -->
+
+      <!-- testimoni start-->
+      <div class="mt-2 mt-md-5 mb-md-4 pt-md-5 pb-4">
+        <h4 class="fw-semibold text-center justify-content-around">
+          Kata Mereka
+        </h4>
+
+        <div
+          id="testi-area"
+          class="d-flex mt-5 pb-3 overflow-auto"
+        >
+          <% testimoni.map((v,i) => { %>
+          <div
+            class="card files my-2 mx-4 d-inline-block flex-shrink-0"
+            id="testi-card"
+
+          >
+            <div class="card-body">
               <div
-                class="mt-5 bottom row align-items-center justify-content-center gap-2 fz-14"
+                class="border border-top-0 border-start-0 border-end-0 mb-2 d-flex"
               >
-                <!-- 1 -->
-                <div
-                  class="px-0 px-md-2 col-10 col-md-3 d-flex align-items-center gap-2 mb-3 mb-md-0"
-                >
-                  <img
-                    src="https://turnedin.id/img/logo/1714118487566.png"
-                    alt=""
-                    style="width: 70px"
-                  />
-                  <div class="d-flex flex-column">
-                    <p class="fw-bold m-0">Kami gak libur demi kamu</p>
-                    <p class="mb-0">
-                      Layanan Turned In buka 24 jam , kami siap layani kamu
-                      kapanpun dimanapun
-                    </p>
-                  </div>
+                <img
+                  src="<%= v.foto %>"
+                  alt="..."
+                  class="rounded-circle foto_profil"
+                />
+                <div class="mb-2 ms-2">
+                  <h5 class="card-title fz-14"><%= v.nama %></h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary fz-14">
+                    <%= v.univ %>
+                  </h6>
                 </div>
+              </div>
 
-                <div class="d-none d-md-block mx-4 vr gx-0"></div>
+              <p class="card-text fz-12" id="isi-testimoni"><%= v.isi %></p>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+      <!-- testimoni end -->
 
-                <!-- 2 -->
-                <div
-                  class="px-0 px-md-2 col-10 col-md-3 d-flex align-items-center gap-2 mb-3 mb-md-0"
-                >
-                  <img
-                    src="https://turnedin.id/img/logo/1714118487567.png"
-                    alt=""
-                    style="width: 70px"
-                  />
-                  <div class="d-flex flex-column">
-                    <p class="fw-bold m-0">Cepet ? Jelas udah otomatis ko</p>
-                    <p class="mb-0">
-                      Turned In gak bakal ketiduran kok :( udah full otomatis
-                      semuanyaaa
-                    </p>
-                  </div>
+      <!-- Alasan start-->
+      <div class="row">
+        <div
+          class="col-12 d-flex flex-column align-items-center mt-2 mt-md-5 mb-md-4 pt-md-5 pb-4 px-0"
+        >
+          <div
+            class="d-flex flex-column align-items-center justify-content-center"
+          >
+            <div class="top text-center">
+              <h4 class="fw-semibold text-center">Biar apa pake Turned In?</h4>
+              <h6 class="fz-14 fw-semibold text-secondary-custom">
+                Biar apa pake Turned In?
+              </h6>
+            </div>
+            <div
+              class="mt-5 bottom row align-items-center justify-content-center gap-2 fz-14"
+            >
+              <!-- 1 -->
+              <div
+                class="px-0 px-md-2 col-10 col-md-3 d-flex align-items-center gap-2 mb-3 mb-md-0"
+              >
+                <img
+                  src="https://turnedin.id/img/logo/1714118487566.png"
+                  alt=""
+                  style="width: 70px"
+                />
+                <div class="d-flex flex-column">
+                  <p class="fw-bold m-0">Kami gak libur demi kamu</p>
+                  <p class="mb-0">
+                    Layanan Turned In buka 24 jam , kami siap layani kamu
+                    kapanpun dimanapun
+                  </p>
                 </div>
+              </div>
 
-                <div class="d-none d-md-block mx-4 vr gx-0"></div>
+              <div class="d-none d-md-block mx-4 vr gx-0"></div>
 
-                <!-- 3 -->
-                <div
-                  class="px-0 px-md-2 col-10 col-md-3 d-flex align-items-center gap-2 mb-3 mb-md-0"
-                >
-                  <img
-                    src="https://turnedin.id/img/logo/1714118487567.png"
-                    alt=""
-                    style="width: 70px"
-                  />
-                  <div class="d-flex flex-column">
-                    <p class="fw-bold m-0">Kalo ada tanya tanya susah dong?</p>
-                    <p class="mb-0">
-                      Gak ygy , ada mimin yang siap jawab pertanyaan mu kok hehe
-                      !!
-                    </p>
-                  </div>
+              <!-- 2 -->
+              <div
+                class="px-0 px-md-2 col-10 col-md-3 d-flex align-items-center gap-2 mb-3 mb-md-0"
+              >
+                <img
+                  src="https://turnedin.id/img/logo/1714118487567.png"
+                  alt=""
+                  style="width: 70px"
+                />
+                <div class="d-flex flex-column">
+                  <p class="fw-bold m-0">Cepet ? Jelas udah otomatis ko</p>
+                  <p class="mb-0">
+                    Turned In gak bakal ketiduran kok :( udah full otomatis
+                    semuanyaaa
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-none d-md-block mx-4 vr gx-0"></div>
+
+              <!-- 3 -->
+              <div
+                class="px-0 px-md-2 col-10 col-md-3 d-flex align-items-center gap-2 mb-3 mb-md-0"
+              >
+                <img
+                  src="https://turnedin.id/img/logo/1714118487567.png"
+                  alt=""
+                  style="width: 70px"
+                />
+                <div class="d-flex flex-column">
+                  <p class="fw-bold m-0">Kalo ada tanya tanya susah dong?</p>
+                  <p class="mb-0">
+                    Gak ygy , ada mimin yang siap jawab pertanyaan mu kok hehe
+                    !!
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Alasan end -->
-      </main>
-      <!-- main end -->
+      </div>
+      <!-- Alasan end -->
+    </main>
+    <!-- main end -->
 
-      <!-- footer start-->
-      <%- include('../../partials/footer.ejs') %>
-      <!-- footer end -->
-    </div>
+    <!-- footer start-->
+    <%- include('../../partials/footer.ejs') %>
+    <!-- footer end -->
 
     <!-- script -->
     <%- include('../../partials/script.ejs') %>

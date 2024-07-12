@@ -1,0 +1,26 @@
+[
+  {
+    "foto": "https://turnedin.id/img/logo/1714118445603.png",
+    "judul": "CEK TURNITIN",
+    "isi": "Cek plagiarisme yang sudah terintegrasi dengan turnitin",
+    "link": "/services/cek-turnitin/order"
+  },
+  {
+    "foto": "https://turnedin.id/img/logo/1714118445603.png",
+    "judul": "PARAFRASE IN",
+    "isi": "Jasa parafrase, turunin hasil turnitin dengan kualitas terjamin anti kecurangan",
+    "link": "/services/parafrase/order"
+  },
+  {
+    "foto": "https://turnedin.id/img/logo/1714118445603.png",
+    "judul": "TRANSLATE IN",
+    "isi": "Translate jurnal/dokumen dengan sistem handal & hasil tidak ngasal",
+    "link": "/services/translate/order"
+  },
+  {
+    "foto": "https://turnedin.id/img/logo/1714118445603.png",
+    "judul": "SARANG FREELANCE",
+    "isi": "Tempatnya nyari orang buat bantu kamudi berbagai kebutuhanmu",
+    "link": "/user/project"
+  }
+]
