@@ -1,0 +1,108 @@
+import mongoose from "mongoose";
+import project from "./src/models/project.schema.js";
+
+// connect to mongodb
+mongoose
+  .connect("mongodb://localhost:27017/turnedin_clone")
+  .then((result) => {
+    console.log("Connected to database");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+const seedProject = [
+  {
+    fotoProfil: "https://turnedin.id/images/default.jpeg",
+    nama: "Dr. Andi",
+    judul: "Jasa Bimbingan Skripsi",
+    harga: { mulaiDari: 100000, sampai: 200000 },
+    penawaran: {
+      penawar: 5,
+      hargaPenawaran: 150000,
+    },
+    deskripsi: "Bimbingan skripsi untuk mahasiswa dari berbagai jurusan",
+    badge: ["Skripsi", "Bimbingan", "Akademik"],
+    status: "Open",
+    tanggal: "2 minggu yang lalu",
+  },
+  {
+    fotoProfil: "https://turnedin.id/images/default.jpeg",
+    nama: "Prof. Budi",
+    judul: "Jasa Konsultasi Penelitian",
+    harga: { mulaiDari: 200000, sampai: 300000 },
+    penawaran: {
+      penawar: 8,
+      hargaPenawaran: 250000,
+    },
+    deskripsi: "Konsultasi penelitian untuk mahasiswa S1 dan S2",
+    badge: ["Penelitian", "Konsultasi", "Akademik"],
+    status: "Open",
+    tanggal: "1 minggu yang lalu",
+  },
+  {
+    fotoProfil: "https://turnedin.id/images/default.jpeg",
+    nama: "Dr. Siti",
+    judul: "Jasa Proofreading dan Editing",
+    harga: { mulaiDari: 50000, sampai: 150000 },
+    penawaran: {
+      penawar: 12,
+      hargaPenawaran: 100000,
+    },
+    deskripsi: "Proofreading dan editing untuk skripsi dan tesis",
+    badge: ["Proofreading", "Editing", "Akademik"],
+    status: "Open",
+    tanggal: "3 hari yang lalu",
+  },
+  {
+    fotoProfil: "https://turnedin.id/images/default.jpeg",
+    nama: "Prof. Hari",
+    judul: "Jasa Konsultasi Metodologi Penelitian",
+    harga: { mulaiDari: 150000, sampai: 250000 },
+    penawaran: {
+      penawar: 4,
+      hargaPenawaran: 200000,
+    },
+    deskripsi: "Konsultasi metodologi penelitian untuk skripsi dan tesis",
+    badge: ["Metodologi", "Konsultasi", "Akademik"],
+    status: "Open",
+    tanggal: "4 minggu yang lalu",
+  },
+  {
+    fotoProfil: "https://turnedin.id/images/default.jpeg",
+    nama: "Dr. Ahmad",
+    judul: "Jasa Analisis Data",
+    harga: { mulaiDari: 250000, sampai: 350000 },
+    penawaran: {
+      penawar: 3,
+      hargaPenawaran: 300000,
+    },
+    deskripsi: "Analisis data untuk penelitian kuantitatif dan kualitatif",
+    badge: ["Analisis Data", "Konsultasi", "Akademik"],
+    status: "Open",
+    tanggal: "5 hari yang lalu",
+  },
+  {
+    fotoProfil: "https://turnedin.id/images/default.jpeg",
+    nama: "Prof. Widodo",
+    judul: "Jasa Penyusunan Proposal Penelitian",
+    harga: { mulaiDari: 120000, sampai: 220000 },
+    penawaran: {
+      penawar: 7,
+      hargaPenawaran: 170000,
+    },
+    deskripsi: "Penyusunan proposal penelitian untuk skripsi dan tesis",
+    badge: ["Proposal", "Penyusunan", "Akademik"],
+    status: "Open",
+    tanggal: "2 hari yang lalu",
+  },
+];
+
+project
+  .insertMany(seedProject)
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(err);
+  });

@@ -1,6 +1,9 @@
 import express from "express";
 import { route } from "./src/routes/index.routes.js";
+// import { connectMongodb } from "./src/data/fetch-data/fetch.mongo.js"
+
 const app = express();
+
 
 app.set("views", "src/views/");
 app.set("view engine", "ejs");

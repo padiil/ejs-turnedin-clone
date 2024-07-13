@@ -22,41 +22,16 @@ const translateIn = (req, res) => {
   });
 };
 
-// sarang freelance page (fetch data from API)
-// const sarangFreelance = async (req, res) => {
-//   // fetch data products
-//   const resultProject = await fetch("http://192.168.18.22:3000/project", {
-//     method: "GET",
-//   });
-//   const project = await resultProject.json();
+// sarang freelance page
 
-//   res.render("pages/sarang-freelance/sarang-freelance.ejs", {
-//     project,
-//     page: "sarang-freelance",
-//     title: "Sarang Freelance",
-//   });
-// };
+// data from mongodb
+// import { sarangFreelance } from "../data/fetch-data/fetch.mongo.js";
 
-// sarang freelance page (fetch data from local JSON)
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+// data from local
+import { sarangFreelance } from "../data/fetch-data/fetch.local.js";
 
-// Mendefinisikan __filename dan __dirname
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// fetch from server
+// import {sarangFreelance} from "../data/fetch-data/fetch.server.js"
 
-const sarangFreelance = async (req, res) => {
-  // Baca data project dari local JSON
-  const projectFilePath = path.join(__dirname, '../data/local-json/freelanceData.json');
-  const projectData = fs.readFileSync(projectFilePath);
-  const project = JSON.parse(projectData);
-
-  res.render('pages/sarang-freelance/sarang-freelance.ejs', {
-    project,
-    page: 'sarang-freelance',
-    title: 'Sarang Freelance',
-  });
-};
 
 export { cekTurnitin, parafraseIn, translateIn, sarangFreelance };

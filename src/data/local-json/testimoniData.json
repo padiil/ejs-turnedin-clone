@@ -1,39 +1,62 @@
 [
-    {
-      "foto": "https://turnedin.id/images/default.jpeg",
-      "nama": "Fadhil Gani",
-      "univ": "UNIGA",
-      "isi": "Saya sangat puas dengan pelayanan dari TurnedIn, hasilnya sangat memuaskan dan cepat. Terima kasih TurnedIn!"
-    },
-    {
-      "foto": "https://turnedin.id/images/default.jpeg",
-      "nama": "Fadhil Gani",
-      "univ": "UNIGA",
-      "isi": "Saya sangat puas dengan pelayanan dari TurnedIn, hasilnya sangat memuaskan dan cepat. Terima kasih TurnedIn!"
-    },
-    {
-      "foto": "https://turnedin.id/images/default.jpeg",
-      "nama": "Fadhil Gani",
-      "univ": "UNIGA",
-      "isi": "Saya sangat puas dengan pelayanan dari TurnedIn, hasilnya sangat memuaskan dan cepat. Terima kasih TurnedIn!"
-    },
-    {
-      "foto": "https://turnedin.id/images/default.jpeg",
-      "nama": "Fadhil Gani",
-      "univ": "UNIGA",
-      "isi": "Saya sangat puas dengan pelayanan dari TurnedIn, hasilnya sangat memuaskan dan cepat. Terima kasih TurnedIn!"
-    },
-    {
-      "foto": "https://turnedin.id/images/default.jpeg",
-      "nama": "Fadhil Gani",
-      "univ": "UNIGA",
-      "isi": "Saya sangat puas dengan pelayanan dari TurnedIn, hasilnya sangat memuaskan dan cepat. Terima kasih TurnedIn!"
-    },
-    {
-      "foto": "https://turnedin.id/images/default.jpeg",
-      "nama": "Fadhil Gani",
-      "univ": "UNIGA",
-      "isi": "Saya sangat puas dengan pelayanan dari TurnedIn, hasilnya sangat memuaskan dan cepat. Terima kasih TurnedIn!"
-    }
-  ]
-  
+  {
+    "foto": "https://turnedin.id/images/default.jpeg",
+    "nama": "Fadhil Gani",
+    "univ": "UNIGA",
+    "isi": "Saya sangat puas dengan pelayanan dari TurnedIn, hasilnya sangat memuaskan dan cepat. Terima kasih TurnedIn!"
+  },
+  {
+    "foto": "https://turnedin.id/images/default.jpeg",
+    "nama": "Ahmad Kurniawan",
+    "univ": "UI",
+    "isi": "Layanan sangat bagus, hasil sesuai dengan yang diharapkan. Akan menggunakan lagi di masa depan."
+  },
+  {
+    "foto": "https://turnedin.id/images/default.jpeg",
+    "nama": "Rina Sari",
+    "univ": "ITB",
+    "isi": "Pelayanan yang sangat cepat dan hasil yang memuaskan. Sangat direkomendasikan!"
+  },
+  {
+    "foto": "https://turnedin.id/images/default.jpeg",
+    "nama": "Siti Aminah",
+    "univ": "UGM",
+    "isi": "TurnedIn benar-benar membantu saya dalam menyelesaikan tugas akhir saya. Terima kasih banyak!"
+  },
+  {
+    "foto": "https://turnedin.id/images/default.jpeg",
+    "nama": "Budi Santoso",
+    "univ": "ITS",
+    "isi": "Hasil sangat memuaskan dan pelayanan yang sangat ramah. Akan merekomendasikan ke teman-teman."
+  },
+  {
+    "foto": "https://turnedin.id/images/default.jpeg",
+    "nama": "Dewi Anggraeni",
+    "univ": "UNPAD",
+    "isi": "Pelayanan yang luar biasa dan sangat profesional. Hasil akhir sangat memuaskan."
+  },
+  {
+    "foto": "https://turnedin.id/images/default.jpeg",
+    "nama": "Joko Widodo",
+    "univ": "UNDIP",
+    "isi": "Sangat puas dengan hasilnya, pelayanan sangat cepat dan hasil akhir sangat bagus. Terima kasih!"
+  },
+  {
+    "foto": "https://turnedin.id/images/default.jpeg",
+    "nama": "Rani Kartika",
+    "univ": "IPB",
+    "isi": "Pelayanan cepat dan hasil yang sangat memuaskan. Akan menggunakan layanan ini lagi di masa mendatang."
+  },
+  {
+    "foto": "https://turnedin.id/images/default.jpeg",
+    "nama": "Samsul Arifin",
+    "univ": "UNS",
+    "isi": "Layanan yang sangat baik dan hasil yang sangat bagus. Terima kasih TurnedIn!"
+  },
+  {
+    "foto": "https://turnedin.id/images/default.jpeg",
+    "nama": "Linda Permata",
+    "univ": "UNAIR",
+    "isi": "Hasil sangat memuaskan dan pelayanan yang sangat cepat. Akan merekomendasikan ke teman-teman."
+  }
+]
